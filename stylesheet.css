@@ -1,0 +1,549 @@
+*{
+    margin:0;
+    padding:0%;
+    box-sizing:border-box;
+}
+.font{
+    border: 1px solid white;
+    width: 100%;
+    height: 20%;
+    background-color: white;
+}
+.font .indent1{
+        font-family: 'Times New Roman';
+        font-weight: bold;
+        font-size: 25px;
+        top:3%;
+        left:12%;
+        position:absolute;
+}
+.font .indent2{
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    font-size: 25px;
+    top:10%;
+    left:12%;
+    position:absolute;
+}
+.font .indent3{
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    font-size: 25px;
+    top:16%;
+    left:12%;
+    position:absolute;
+}
+.font .logo1{
+    width: 8%;
+    height: 20%;
+    top:3%;
+    left: 3%;
+    position: absolute;
+}
+.font .logo2{
+    width: 8%;
+    height: 20%;
+    top:2%;
+    left: 88%;
+    position: absolute;
+}
+.nav li, a, button{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    list-style:none;
+}
+.nav nav{
+    height: 80px;
+    width: 100%;
+}
+.nav nav ul{
+    float: right;
+    margin-left: 40px;
+}
+.nav nav li{
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+.nav nav a{
+    color: black;
+    font-size: 18px;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+.nav a:hover{
+    color: blue;
+    transition: .5s;
+}
+.nav button{
+    padding: 9px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.nav button:hover{
+    background-color: black;
+    color: white;
+}
+.nav nav #icon{
+    margin-top: 25px;
+    margin-right: 45px;
+    color: black;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+.review{
+    margin-left: 1%;
+    margin-bottom: 1%;
+    width: 98%;
+    height: 38%;
+}
+.review .text1{
+    border: 0;
+    width: 50%;
+    margin-left: 2%;
+}
+.review h2{
+    font-family:'Engravers MT';
+    color: navy;
+}
+.review p{
+    font-family: 'Arial Rounded MT Bold';
+}
+.review img{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: -230px;
+    width: 640px;
+    height: 250px;
+    margin-left: 100%;
+}
+.img-slider{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+.img-slider .slide{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+.img-slider .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition:  2s;
+    transition-property: clip-path;
+}
+.img-slider .slide img{
+    z-index: 1;
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+}
+.img-slider .slide .info{
+    position: absolute;
+    top: 0;
+    padding: 15px 30px;
+}
+.img-slider .slide .info h2{
+    color: black;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.img-slider .slide .info p{
+    color: white;
+    background: rgba(0,0,0,0.5);
+    width: 60%;
+    padding: 10px;
+    border-radius: 4px;
+}
+.img-slider .navigation{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.img-slider .navigation .btn{
+    background: rgba(255,255,255,0.5);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;    
+}
+.img-slider .navigation .btn.active{
+    background: black;   
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+.address{
+    border: 1px solide black;
+    width: 100%;
+    background: black;
+}
+.address h3{
+    text-align: center;
+    color: gray;
+}
+.address p{
+    text-align: center;
+    color: gray;
+}
+.reg{
+    margin-left: 1%;
+    margin-top: -3%; 
+    margin-bottom: 1%;
+    background: navy;
+    width: 98%;
+    height: 50%;
+}
+.reg img{
+    width: 50%;
+    height: 100%;
+}
+.reg h2{
+    margin-top: -22%;
+    margin-left: 52%;
+    color: white
+}
+.reg p{
+    margin-top: 2%;
+    margin-left: 58%;
+    text-align: center;
+    color: white;
+    font-family: cursive;
+    font-size: 30;
+}
+.reg button{
+    margin-top: 2% ;
+    margin-left: 85%;
+    text-transform: uppercase;
+    background: red;
+    padding: 9px 20px;
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.reg button:hover{
+    background: green;
+}
+.form{
+    margin-top: 3%;
+    margin-left: 2%;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 96%;
+    height: 80%;
+}
+.form form{
+    font-family: serif;
+}
+.form form input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 30px;
+}
+.form form h2{
+    margin-top: 1%;
+    margin-left: 1%;
+    font-family: serif;
+    font-style: italic;
+    color: navy;
+    text-decoration: underline;
+    font-size: 30;
+}
+.form form p{
+    margin-left: 1%;
+    font-family: cursive;
+    font-size: 20;
+}
+.form li{
+    font-family: serif;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    list-style:none;
+}
+.department ul{
+    float: right;
+    margin-top: -20px;
+    margin-left: 40px;
+}
+.department li{
+    display: inline-block;
+    margin: 0 95px;
+    line-height: 50px;
+}
+.personal ul{
+    float: right;
+    margin-top: -20px;
+    margin-left: 40px;
+}
+.personal li{
+    display: inline-block;
+    margin: 0 25px;
+    line-height: 50px;
+}
+.contact ul{
+    float: right;
+    margin-left: 10px;
+}
+.contact li{
+    display: inline-block;
+    margin: 0 185px;
+    line-height: 50px;
+}
+.form .button{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: large;
+    width: 9%;
+    height: 7%;
+    margin-top: 2%;
+    margin-left: 50%;
+    background: cyan;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.form .button:hover{
+    background: black;
+    color: cyan;
+}
+.login{
+    margin-top: 5%;
+    margin-left: 35%;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 30%;
+    height: 60%;
+    background-color: black;
+    box-shadow: 0 15px 25px black;
+    padding: 40px;
+    color: cyan;
+}
+.login h2{
+    margin-top: 10%;
+    margin-left: 3%;
+    font-family: sans-serif;
+    color: cyan;
+    text-align: center;
+}
+.login .user-box{
+    position: relative;
+}
+.login .user-box input{
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    margin-bottom: 30px;
+    color: white;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn button{
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: cyan;
+    background-color: black;
+    border: 2px solid cyan;
+    cursor: pointer;
+}
+.btn button:hover{
+    background-color: white;
+    color: black;
+}
+.login h4{
+    margin-top: 5%;
+    margin-left: 10%;
+    color: white;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h4 a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: cyan;
+    margin-left: 5%;
+}
+@media screen and (max-width:600px){
+    .font .indent1{
+        font-family: 'Times New Roman';
+        font-weight: bold;
+        font-size: 19px;
+        top:25px;
+        left:25%;
+        position:absolute;
+    }
+    .font .indent2{
+        font-family: 'Times New Roman';
+        font-size: small;
+        font-size: 19px;
+        top:56px;
+        left:25%;
+        position:absolute;
+    }
+    .font .indent3{
+        font-family: 'Times New Roman';
+        font-size: small;
+        font-size: 19px;
+        top:80px;
+        left:25%;
+        position:absolute;
+    }
+    .font .logo1{
+        width: 18%;
+        height: 18%;
+        top: 3%;
+        left: 3%;
+        position: absolute;
+    }
+    .font .logo2{
+        width: 15%;
+        height: 20%;
+        top:2%;
+        left: 85%;
+        position: absolute;
+    }
+    .nav nav #icon{
+        display: block;
+        font-size: 25px;
+        margin-right: 90%;
+    }
+    .nav nav #icon:hover{
+        color: blue;
+    }
+    .nav nav ul{
+        position: fixed;
+        width: 100%;
+        height: 70vh;
+        background: white;
+        top: 200px;
+        left: -150%;
+        text-align: center;
+        transition: all .5s;
+    }
+    .nav nav li{
+        display: block;
+        margin: 40px;
+        line-height: 30px;
+    }
+    .nav nav ul.show{
+        left: -30%;
+    }
+    .review{
+        width: 98%;
+        height: 90%;
+    }
+    .review .text1{
+        width: 98%;
+    }
+    .review h2{
+        margin-left: 0%;
+        font-size: 20px;
+    }
+    .review p{
+        margin-left: 0%;
+        font-size: 19px;  
+    }
+    .review img{
+        width: 100%;
+        height: 50%;
+        margin-top:15 ;
+        margin-left: -0%;
+    }
+    .slide{
+        margin-top: 0%;
+    }
+    .img-slider{
+        width: 473px;
+        margin: 5px;
+        margin-top: 70px;
+    }
+    .img-slider .slide img{
+        height: 300px;
+    }
+    .img-slider .slide .info{
+        padding: 10px 25px;
+    }
+    .img-slider .navigation{
+        top: 40%;
+    }
+    .img-slider .slide h2{
+        font-size: 35px;
+    }
+    .img-slider .slide p{
+        width: 70%;
+    }
+    .img-slider .navigation{
+        bottom: 25px;
+    }
+    .img-slider .navigation .btn{
+        width: 10px;
+        height: 10px;
+        margin: 8px;
+    }
+    .reg{
+        margin-top: -343px;
+        width: 98%;
+        height: 90%;
+    }
+    .reg img{
+        width: 100%;
+        height: 50%;
+    }
+    .reg h2{
+        margin-top:5%;
+        margin-left: 5%;
+        font-size: 20px;
+    }
+    .reg p{
+        margin-left: 0%;
+        margin-top: 5%;
+        font-size: 19px;
+        
+    }
+    .reg button{
+        margin-left: 60%;
+        margin-top: 25;
+        font-size: 15px
+    }
+    .form{
+        height: 170%;
+    }
+    .form .button{
+        width: 25%;
+        height: 5%;
+        margin-left: 70%;
+    }
+    .login{
+        margin-left: 15%;
+        margin-top: 10%;
+        width: 70%;
+        height: 60%;
+    }
+}

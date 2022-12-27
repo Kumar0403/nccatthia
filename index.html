@@ -1,0 +1,163 @@
+<html>
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="font">
+    <br>
+    <label class="indent1">राष्ट्रीय कैडेट कोर</label><br>
+    <label class="indent2">NATIONAL CADET CORPS</label><br>
+    <label class="indent3">SUB UNIT 2</label><br>
+    <img src="2020010935.png" class="logo2">
+    <img src="2020010996.png" class="logo1">
+</div>
+<div class="nav">
+<nav>
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a class="cta" href="login.html"><button>Login</button></a></li>
+        <li><a class="cta" href="form.html"><button>Register</button></a></li>
+    </ul>
+    <label id="icon">
+        <i class="fas fa-bars"></i>
+    </label>
+</nav>
+</div>
+<div class="review">
+<div class="text1">
+<h2>AIM OF NCC</h2><br>
+<p>The ‘Aims’ of the NCC laid out in 1988 have stood the test of time and continue to
+    meet the requirements expected of it in the current socio–economic scenario of the country.
+    The NCC aims at developing character, comradeship, discipline, a secular outlook, the spirit.</p><br><br>
+<h2>PLEDGE</h2><br>
+<p>We the cadets of the National Cadet Corps,
+    do solemnly pledge that we shall always uphold the unity of India.
+    We resolve to be disciplined and responsible citizens of our nation.
+    We shall undertake positive community service in the spirit of selflessness
+    and concern for our fellow beings.</p>
+    <img src="Screenshot%20(50).png" alt="">
+</div>
+</div>
+ <div class="img-slider">
+      <div class="slide active">
+        <img src="1.jpg" alt="">
+        <div class="info">
+          <h2>Slide 01</h2>
+          <p>........</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="2.jpg" alt="">
+        <div class="info">
+          <h2>Slide 02</h2>
+          <p>..............</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="3.jpg" alt="">
+        <div class="info">
+          <h2>Slide 03</h2>
+          <p>...........</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="4.jpg" alt="">
+        <div class="info">
+          <h2>Slide 04</h2>
+          <p>..........</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="5.jpg" alt="">
+        <div class="info">
+          <h2>Slide 05</h2>
+          <p>..........</p>
+        </div>
+      </div>
+      <div class="navigation">
+        <div class="btn active"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+      </div>
+</div>
+<div class="reg">
+    <img src="IMG-20220818-WA0020.jpg" alt="">
+    <h2>Join Ncc Navy</h2>
+    <p>"Left and Right are for kids<br> for sea warriors,<br> it's "Port side starboard SIDE"...</p>
+    <a class="cta" href="#"><button>Register</button></a> 
+</div>
+<div class="address">
+    <h3>Contact</h3>
+    <p>SUB UNIT 2</p>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#icon').click(function(){
+        $('ul').toggleClass('show');
+    });
+});
+</script>
+<script>
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 10000);
+      }
+      repeater();
+    }
+    repeat();
+</script>
+</body>
+</html>
